@@ -1,5 +1,61 @@
-$primary-colour: rgb(0, 60, 255);
+@import "config";
 
+* {
+  box-sizing: border-box;
+}
 body {
-  background: $primary-colour;
+  @include background;
+  background: $secondary-colour;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 400;
+  color: $secondary-colour;
+
+  &.lg-heading {
+    font-size: 5.5rem;
+    border: solid 2px $primary-colour;
+    width: 70%;
+    margin: auto;
+    padding-bottom: 15px;
+  }
+
+  &.sm-heading {
+    padding: auto;
+    background: rgba($primary-colour, 0.4);
+    margin-top: 20px;
+  }
+}
+
+a {
+  color: $secondary-colour;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.second-text {
+  color: rgb(2, 2, 54);
+}
+
+main {
+  height: 100%;
+  text-align: center;
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 35vh;
+    }
+  }
 }
