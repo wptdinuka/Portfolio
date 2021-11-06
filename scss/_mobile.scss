@@ -1,0 +1,54 @@
+@import "config";
+
+@include mediaSm {
+  main#home h1 {
+    font-size: 40px;
+  }
+  main#home h2 {
+    font-size: 15px;
+  }
+}
+
+@include mediaMe {
+  main#home h1 {
+    font-size: 50px;
+  }
+
+  main {
+    .lg-heading {
+      line-height: 1;
+    }
+  }
+
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+  }
+  .menu-nav {
+    height: 70vh;
+  }
+
+  .menu-branding {
+    height: 30vh;
+    .portrait {
+      height: 150px;
+      width: 150px;
+    }
+  }
+}
+
+@include mediaLg {
+  main {
+    .lg-heading {
+      line-height: 1;
+    }
+    .sm-heading {
+      font-size: 20px;
+    }
+  }
+}
+
+@include mediaXl {
+}

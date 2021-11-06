@@ -85,6 +85,36 @@
 .nav-item:nth-child(5) {
   transition-delay: 0.5s; }
 
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    font-size: 40px; }
+  main#home h2 {
+    font-size: 15px; } }
+
+@media screen and (max-width: 768px) {
+  main#home h1 {
+    font-size: 50px; }
+  main .lg-heading {
+    line-height: 1; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+  .menu-nav {
+    height: 70vh; }
+  .menu-branding {
+    height: 30vh; }
+    .menu-branding .portrait {
+      height: 150px;
+      width: 150px; } }
+
+@media screen and (max-width: 1170px) and (min-width: 769px) {
+  main .lg-heading {
+    line-height: 1; }
+  main .sm-heading {
+    font-size: 20px; } }
+
 * {
   box-sizing: border-box; }
 
