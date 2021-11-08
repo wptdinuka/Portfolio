@@ -4,13 +4,13 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 0.5s ease-in-out; }
+  transition: all 0.4s ease-in-out; }
   .menu-btn .btn-line {
     width: 30px;
     height: 3px;
     margin: 0 0 6px 0;
     background: white;
-    transition: all 0.5s ease-in-out; }
+    transition: all 0.4s ease-in-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -44,13 +44,13 @@
     background: #046dd4;
     list-style: none;
     transform: translate3d(100%, 0, 0);
-    transition: all 0.5s ease-in-out; }
+    transition: all 0.4s ease-in-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     background: #047aed;
     transform: translate3d(-100%, 0, 0);
-    transition: all 0.5s ease-in-out; }
+    transition: all 0.4s ease-in-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
@@ -66,9 +66,10 @@
     font-size: 30px;
     text-transform: uppercase;
     font-weight: 400;
-    transition: all 0.5s ease-in-out; }
+    transition: all 0.4s ease-in-out; }
     .menu .nav-link:hover {
-      color: black; }
+      color: black;
+      transition: ease-out; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -132,29 +133,79 @@ body {
       content: "";
       position: absolute;
       top: 0;
-      right: 0;
+      left: 0;
       width: 100%;
       height: 100%;
+      z-index: -1;
+      background: rgba(4, 122, 237, 0.6); }
+  body#bg-about {
+    background: url(../images/wpt.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-about::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 410%;
       z-index: -1;
       background: rgba(4, 122, 237, 0.6); }
 
 h1,
 h2 {
   margin: 0;
-  font-weight: 400;
-  color: white; }
+  font-weight: 400; }
   h1.lg-heading,
   h2.lg-heading {
     font-size: 5.5rem;
     border: solid 2px #047aed;
     width: 70%;
     margin: auto;
-    padding-bottom: 15px; }
+    padding-bottom: 15px;
+    color: white; }
   h1.sm-heading,
   h2.sm-heading {
     padding: auto;
     background: rgba(4, 122, 237, 0.4);
-    margin-top: 20px; }
+    margin-top: 20px;
+    color: white; }
+  h1.lg-heading-about,
+  h2.lg-heading-about {
+    padding: auto;
+    font-size: 5.5rem;
+    background: rgba(4, 122, 237, 0.4);
+    margin-top: 20px;
+    padding-left: 30px;
+    color: white;
+    text-align: start; }
+  h1.sm-heading-edu,
+  h2.sm-heading-edu {
+    padding: 5px 20px;
+    background: rgba(4, 122, 237, 0.4);
+    margin: 40% 0%;
+    color: white;
+    position: absolute;
+    font-size: 30px;
+    width: 100%; }
+  h1.sm-heading-skil,
+  h2.sm-heading-skil {
+    padding: 5px 20px;
+    background: rgba(4, 122, 237, 0.4);
+    margin-top: 1100px;
+    color: white;
+    width: 100%;
+    position: absolute;
+    font-size: 30px; }
+  h1.sm-heading-exa,
+  h2.sm-heading-exa {
+    padding: 5px 20px;
+    background: rgba(4, 122, 237, 0.4);
+    margin-top: 1670px;
+    color: white;
+    width: 100%;
+    position: absolute;
+    font-size: 30px; }
 
 a {
   color: white;
@@ -175,3 +226,171 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 35vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 20px;
+  row-gap: 300px;
+  margin-bottom: 250px;
+  grid-template-areas: "bioimage bio" "edu1 edu2" "skills skills" "exa1 exa2";
+  grid-template-columns: repeat(2, 1fr); }
+
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 70px;
+  border-radius: 50%;
+  border: 2px solid; }
+  .bio-image:hover {
+    transform: rotateY(360deg);
+    transition: 2s; }
+
+.bio {
+  grid-area: bio;
+  width: 80%;
+  text-align: start;
+  padding-top: 20px;
+  background: rgba(4, 122, 237, 0.4);
+  padding: 10px 40px;
+  margin-top: 80px;
+  color: white; }
+
+.edu1 {
+  grid-area: edu1;
+  background-color: white;
+  width: 465px;
+  height: 200px;
+  margin: auto;
+  margin-left: 160px;
+  background: url(/dist/images/thw.jpg);
+  background-size: cover; }
+  .edu1 .edu-text1 {
+    position: absolute;
+    opacity: 0;
+    color: white;
+    height: 200px;
+    width: 465px;
+    background: rgba(0, 0, 0, 0.9);
+    font-size: 30px;
+    line-height: 10px;
+    padding-top: 30px; }
+    .edu1 .edu-text1:hover {
+      opacity: 1;
+      transition: all 0.4s ease-in-out; }
+
+.edu2 {
+  grid-area: edu2;
+  background: url(/dist/images/rc.jpg);
+  background-size: cover;
+  width: 465px;
+  height: 200px;
+  margin: auto;
+  margin-right: 170px; }
+  .edu2 .edu-text2 {
+    color: white;
+    padding-top: 50px;
+    font-size: 25px;
+    line-height: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    height: 200px;
+    width: 465px;
+    opacity: 0; }
+    .edu2 .edu-text2:hover {
+      opacity: 1;
+      transition: all 0.4s ease-in-out; }
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  grid-area: skills;
+  background: rgba(255, 255, 255, 0.4);
+  margin: auto;
+  margin-top: 60px;
+  padding-top: 15px; }
+  .skills .html-image:hover {
+    height: 250px;
+    transition: all 0.4s ease-in-out; }
+  .skills .js-image:hover {
+    height: 250px;
+    transition: ease-out;
+    transition: all 0.4s ease-in-out; }
+  .skills .css-image {
+    height: 200px;
+    margin-left: 40px;
+    margin-right: 40px; }
+    .skills .css-image:hover {
+      height: 250px;
+      transition: ease-out;
+      transition: all 0.4s ease-in-out; }
+  .skills .react-image {
+    margin: 40px;
+    margin-right: 20px; }
+    .skills .react-image:hover {
+      height: 200px;
+      transition: ease-out;
+      transition: all 0.4s ease-in-out; }
+  .skills .java-image {
+    margin-top: 40px; }
+    .skills .java-image:hover {
+      height: 200px;
+      transition: ease-out;
+      transition: all 0.4s ease-in-out; }
+  .skills .so-image {
+    margin: 40px;
+    margin-left: 20px; }
+    .skills .so-image:hover {
+      height: 190px;
+      transition: ease-out;
+      transition: all 0.4s ease-in-out; }
+
+.exa1 {
+  grid-area: exa1;
+  background: url(/dist/images/teatas.jpg);
+  background-size: cover;
+  width: 465px;
+  height: 300px;
+  margin: auto;
+  margin-left: 150px; }
+  .exa1 .exa-text1 {
+    color: white;
+    padding-top: 50px;
+    font-size: 25px;
+    line-height: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    height: 300px;
+    width: 465px;
+    opacity: 0; }
+    .exa1 .exa-text1:hover {
+      opacity: 1;
+      transition: all 0.4s ease-in-out; }
+
+.exa2 {
+  grid-area: exa2;
+  background: url(/dist/images/telc.jpg);
+  background-size: cover;
+  width: 465px;
+  height: 300px;
+  margin: auto;
+  margin-right: 170px; }
+  .exa2 .exa-text2 {
+    color: white;
+    padding-top: 50px;
+    font-size: 25px;
+    line-height: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    height: 300px;
+    width: 465px;
+    opacity: 0; }
+    .exa2 .exa-text2:hover {
+      opacity: 1;
+      transition: all 0.4s ease-in-out; }
+
+footer {
+  background: #047aed;
+  height: 150px; }
+  footer .footer-text {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 50px; }

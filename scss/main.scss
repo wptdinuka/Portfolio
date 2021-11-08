@@ -7,7 +7,7 @@
 }
 body {
   @include background;
-  background: $secondary-colour;
+  background: white;
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -18,7 +18,6 @@ h1,
 h2 {
   margin: 0;
   font-weight: 400;
-  color: $secondary-colour;
 
   &.lg-heading {
     font-size: 5.5rem;
@@ -26,12 +25,54 @@ h2 {
     width: 70%;
     margin: auto;
     padding-bottom: 15px;
+    color: $secondary-colour;
   }
 
   &.sm-heading {
     padding: auto;
     background: rgba($primary-colour, 0.4);
     margin-top: 20px;
+    color: $secondary-colour;
+  }
+
+  &.lg-heading-about {
+    padding: auto;
+    font-size: 5.5rem;
+    background: rgba($primary-colour, 0.4);
+    margin-top: 20px;
+    padding-left: 30px;
+    color: $secondary-colour;
+    text-align: start;
+  }
+
+  &.sm-heading-edu {
+    padding: 5px 20px;
+    background: rgba($primary-colour, 0.4);
+    margin: 40% 0%;
+    color: $secondary-colour;
+    position: absolute;
+    font-size: 30px;
+    width: 100%;
+  }
+
+  &.sm-heading-skil {
+    padding: 5px 20px;
+    background: rgba($primary-colour, 0.4);
+    margin-top: 1100px;
+    color: $secondary-colour;
+    width: 100%;
+    position: absolute;
+    font-size: 30px;
+  }
+
+  &.sm-heading-exa {
+    padding: 5px 20px;
+    background: rgba($primary-colour, 0.4);
+    margin-top: 1670px;
+    color: $secondary-colour;
+    width: 100%;
+    position: absolute;
+    font-size: 30px;
   }
 }
 
@@ -59,5 +100,226 @@ main {
     h1 {
       margin-top: 35vh;
     }
+  }
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 20px;
+  row-gap: 300px;
+  margin-bottom: 250px;
+  grid-template-areas:
+    "bioimage bio"
+    "edu1 edu2"
+    "skills skills"
+    "exa1 exa2";
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 70px;
+  border-radius: 50%;
+  border: 2px solid;
+
+  &:hover {
+    transform: rotateY(360deg);
+    transition: 2s;
+  }
+}
+
+.bio {
+  grid-area: bio;
+  width: 80%;
+  text-align: start;
+  padding-top: 20px;
+  background: rgba($primary-colour, 0.4);
+  padding: 10px 40px;
+  margin-top: 80px;
+  color: $secondary-colour;
+}
+
+.edu1 {
+  grid-area: edu1;
+  background-color: white;
+  width: 465px;
+  height: 200px;
+  margin: auto;
+  margin-left: 160px;
+  background: url(/dist/images/thw.jpg);
+  background-size: cover;
+
+  .edu-text1 {
+    position: absolute;
+    opacity: 0;
+    color: white;
+    height: 200px;
+    width: 465px;
+    background: rgba(black, 0.9);
+    font-size: 30px;
+    line-height: 10px;
+    padding-top: 30px;
+
+    &:hover {
+      opacity: 1;
+      @include easeOut;
+    }
+  }
+}
+
+.edu2 {
+  grid-area: edu2;
+  background: url(/dist/images/rc.jpg);
+  background-size: cover;
+  width: 465px;
+  height: 200px;
+  margin: auto;
+  margin-right: 170px;
+
+  .edu-text2 {
+    color: white;
+    padding-top: 50px;
+    font-size: 25px;
+    line-height: 10px;
+    background: rgba(black, 0.9);
+    height: 200px;
+    width: 465px;
+    opacity: 0;
+
+    &:hover {
+      opacity: 1;
+      @include easeOut;
+    }
+  }
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  grid-area: skills;
+  background: rgba($secondary-colour, 0.4);
+  margin: auto;
+  margin-top: 60px;
+  padding-top: 15px;
+
+  .html-image {
+    &:hover {
+      height: 250px;
+      @include easeOut;
+    }
+  }
+
+  .js-image {
+    &:hover {
+      height: 250px;
+      transition: ease-out;
+      @include easeOut;
+    }
+  }
+
+  .css-image {
+    height: 200px;
+    margin-left: 40px;
+    margin-right: 40px;
+    &:hover {
+      height: 250px;
+      transition: ease-out;
+      @include easeOut;
+    }
+  }
+
+  .react-image {
+    margin: 40px;
+    margin-right: 20px;
+    &:hover {
+      height: 200px;
+      transition: ease-out;
+      @include easeOut;
+    }
+  }
+
+  .java-image {
+    margin-top: 40px;
+    &:hover {
+      height: 200px;
+      transition: ease-out;
+      @include easeOut;
+    }
+  }
+
+  .so-image {
+    margin: 40px;
+    margin-left: 20px;
+    &:hover {
+      height: 190px;
+      transition: ease-out;
+      @include easeOut;
+    }
+  }
+}
+
+.exa1 {
+  grid-area: exa1;
+  background: url(/dist/images/teatas.jpg);
+  background-size: cover;
+  width: 465px;
+  height: 300px;
+  margin: auto;
+  margin-left: 150px;
+
+  .exa-text1 {
+    color: white;
+    padding-top: 50px;
+    font-size: 25px;
+    line-height: 10px;
+    background: rgba(black, 0.9);
+    height: 300px;
+    width: 465px;
+    opacity: 0;
+
+    &:hover {
+      opacity: 1;
+      @include easeOut;
+    }
+  }
+}
+
+.exa2 {
+  grid-area: exa2;
+  background: url(/dist/images/telc.jpg);
+  background-size: cover;
+  width: 465px;
+  height: 300px;
+  margin: auto;
+  margin-right: 170px;
+
+  .exa-text2 {
+    color: white;
+    padding-top: 50px;
+    font-size: 25px;
+    line-height: 10px;
+    background: rgba(black, 0.9);
+    height: 300px;
+    width: 465px;
+    opacity: 0;
+
+    &:hover {
+      opacity: 1;
+      @include easeOut;
+    }
+  }
+}
+
+footer {
+  background: $primary-colour;
+  height: 150px;
+
+  .footer-text {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 50px;
   }
 }
