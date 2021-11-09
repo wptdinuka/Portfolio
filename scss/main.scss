@@ -99,6 +99,15 @@ h2 {
     color: $secondary-colour;
     background: rgba($primary-colour, 0.8);
   }
+
+  &.lg-heading-contact {
+    font-size: 4.5rem;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 15px;
+    color: $secondary-colour;
+    background: rgba($primary-colour, 0.8);
+  }
 }
 
 a {
@@ -354,6 +363,7 @@ main {
   display: flex;
   column-gap: 170px;
   width: 80%;
+  margin-bottom: 30px;
 
   .jobs-left {
     flex: 40%;
@@ -519,6 +529,101 @@ main {
           opacity: 1;
           @include easeOut;
         }
+      }
+    }
+  }
+}
+
+//Contact
+
+//
+.cont {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .email {
+    background: url(/dist/images/email.jpg);
+    background-size: cover;
+    height: 35vh;
+    width: 70vh;
+    margin-bottom: 150px;
+    margin-top: 100px;
+
+    .cont-text {
+      font-size: 35px;
+      font-weight: 400;
+      color: white;
+      background: rgba(black, 0.5);
+      height: 35vh;
+      margin-top: 0px;
+      padding-top: 35px;
+      border: 2px solid;
+
+      &:hover {
+        height: 45vh;
+        width: 85vh;
+        color: black;
+        background: white;
+        margin-left: -50px;
+        padding-top: 75px;
+      }
+    }
+  }
+
+  .p-num {
+    background: url(/dist/images/pn.jpg);
+    background-size: cover;
+    height: 35vh;
+    width: 70vh;
+    margin-bottom: 150px;
+
+    .cont-text {
+      font-size: 35px;
+      font-weight: 500;
+      color: white;
+      background: rgba(white, 0.3);
+      height: 35vh;
+      margin-top: 0px;
+      padding-top: 35px;
+      border: 2px solid;
+
+      &:hover {
+        height: 45vh;
+        width: 85vh;
+        color: black;
+        background: white;
+        margin-left: -50px;
+        padding-top: 75px;
+      }
+    }
+  }
+
+  .address {
+    background: url(/dist/images/address.jpg);
+    background-size: cover;
+    height: 35vh;
+    width: 70vh;
+    margin-bottom: 150px;
+
+    .cont-text {
+      font-size: 35px;
+      font-weight: 400;
+      color: white;
+      background: rgba(black, 0.5);
+      height: 35vh;
+      margin-top: 0px;
+      padding-top: 35px;
+      border: 2px solid;
+
+      &:hover {
+        height: 45vh;
+        width: 85vh;
+        color: black;
+        background: white;
+        margin-left: -50px;
+        padding-top: 75px;
       }
     }
   }

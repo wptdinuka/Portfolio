@@ -95,6 +95,85 @@
   .exa2 {
     margin-left: 22%;
   }
+
+  ///road
+
+  .jobs {
+    display: flex;
+    flex-wrap: wrap;
+
+    .jobs-left {
+      height: 1500px;
+      width: 550px;
+
+      .job1 {
+        height: 350px;
+        width: 470px;
+        .jobtext {
+          height: 350px;
+          width: 470px;
+          margin-left: -235px;
+        }
+      }
+
+      .job2 {
+        height: 350px;
+        width: 470px;
+        .jobtext {
+          height: 350px;
+          width: 470px;
+          margin-left: -235px;
+        }
+      }
+
+      .job3 {
+        height: 350px;
+        width: 470px;
+        .jobtext {
+          height: 350px;
+          width: 470px;
+          margin-left: -235px;
+        }
+      }
+    }
+
+    .jobs-right {
+      height: 1500px;
+      width: 550px;
+      margin-left: 100px;
+      margin-top: 30px;
+
+      .job4 {
+        height: 350px;
+        width: 470px;
+        .jobtext {
+          height: 350px;
+          width: 470px;
+          margin-left: -235px;
+        }
+      }
+
+      .job5 {
+        height: 350px;
+        width: 470px;
+        .jobtext {
+          height: 350px;
+          width: 470px;
+          margin-left: -235px;
+        }
+      }
+
+      .job6 {
+        height: 350px;
+        width: 470px;
+        .jobtext {
+          height: 350px;
+          width: 470px;
+          margin-left: -235px;
+        }
+      }
+    }
+  }
 }
 
 @include mediaLg {

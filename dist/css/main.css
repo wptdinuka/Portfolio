@@ -136,6 +136,19 @@ body {
       width: 100%;
       height: 300%;
       z-index: -1; }
+  body#bg-contact {
+    background: url(../images/wpt.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-contact::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 230%;
+      z-index: -1;
+      background: rgba(211, 211, 211, 0.4); }
 
 h1,
 h2 {
@@ -206,6 +219,14 @@ h2 {
   h1.lg-heading-road,
   h2.lg-heading-road {
     font-size: 5.5rem;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 15px;
+    color: white;
+    background: rgba(4, 122, 237, 0.8); }
+  h1.lg-heading-contact,
+  h2.lg-heading-contact {
+    font-size: 4.5rem;
     width: 100%;
     margin: auto;
     padding-bottom: 15px;
@@ -395,7 +416,8 @@ main {
 .jobs {
   display: flex;
   column-gap: 170px;
-  width: 80%; }
+  width: 80%;
+  margin-bottom: 30px; }
   .jobs .jobs-left {
     flex: 40%;
     list-style: none;
@@ -532,6 +554,79 @@ main {
           opacity: 1;
           transition: all 0.4s ease-in-out; }
 
+.cont {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .cont .email {
+    background: url(/dist/images/email.jpg);
+    background-size: cover;
+    height: 35vh;
+    width: 70vh;
+    margin-bottom: 150px;
+    margin-top: 100px; }
+    .cont .email .cont-text {
+      font-size: 35px;
+      font-weight: 400;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      height: 35vh;
+      margin-top: 0px;
+      padding-top: 35px;
+      border: 2px solid; }
+      .cont .email .cont-text:hover {
+        height: 45vh;
+        width: 85vh;
+        color: black;
+        background: white;
+        margin-left: -50px;
+        padding-top: 75px; }
+  .cont .p-num {
+    background: url(/dist/images/pn.jpg);
+    background-size: cover;
+    height: 35vh;
+    width: 70vh;
+    margin-bottom: 150px; }
+    .cont .p-num .cont-text {
+      font-size: 35px;
+      font-weight: 500;
+      color: white;
+      background: rgba(255, 255, 255, 0.3);
+      height: 35vh;
+      margin-top: 0px;
+      padding-top: 35px;
+      border: 2px solid; }
+      .cont .p-num .cont-text:hover {
+        height: 45vh;
+        width: 85vh;
+        color: black;
+        background: white;
+        margin-left: -50px;
+        padding-top: 75px; }
+  .cont .address {
+    background: url(/dist/images/address.jpg);
+    background-size: cover;
+    height: 35vh;
+    width: 70vh;
+    margin-bottom: 150px; }
+    .cont .address .cont-text {
+      font-size: 35px;
+      font-weight: 400;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      height: 35vh;
+      margin-top: 0px;
+      padding-top: 35px;
+      border: 2px solid; }
+      .cont .address .cont-text:hover {
+        height: 45vh;
+        width: 85vh;
+        color: black;
+        background: white;
+        margin-left: -50px;
+        padding-top: 75px; }
+
 footer {
   background: #047aed;
   height: 150px;
@@ -590,7 +685,60 @@ footer {
   .exa1 {
     margin-left: 22%; }
   .exa2 {
-    margin-left: 22%; } }
+    margin-left: 22%; }
+  .jobs {
+    display: flex;
+    flex-wrap: wrap; }
+    .jobs .jobs-left {
+      height: 1500px;
+      width: 550px; }
+      .jobs .jobs-left .job1 {
+        height: 350px;
+        width: 470px; }
+        .jobs .jobs-left .job1 .jobtext {
+          height: 350px;
+          width: 470px;
+          margin-left: -235px; }
+      .jobs .jobs-left .job2 {
+        height: 350px;
+        width: 470px; }
+        .jobs .jobs-left .job2 .jobtext {
+          height: 350px;
+          width: 470px;
+          margin-left: -235px; }
+      .jobs .jobs-left .job3 {
+        height: 350px;
+        width: 470px; }
+        .jobs .jobs-left .job3 .jobtext {
+          height: 350px;
+          width: 470px;
+          margin-left: -235px; }
+    .jobs .jobs-right {
+      height: 1500px;
+      width: 550px;
+      margin-left: 100px;
+      margin-top: 30px; }
+      .jobs .jobs-right .job4 {
+        height: 350px;
+        width: 470px; }
+        .jobs .jobs-right .job4 .jobtext {
+          height: 350px;
+          width: 470px;
+          margin-left: -235px; }
+      .jobs .jobs-right .job5 {
+        height: 350px;
+        width: 470px; }
+        .jobs .jobs-right .job5 .jobtext {
+          height: 350px;
+          width: 470px;
+          margin-left: -235px; }
+      .jobs .jobs-right .job6 {
+        height: 350px;
+        width: 470px; }
+        .jobs .jobs-right .job6 .jobtext {
+          height: 350px;
+          width: 470px;
+          margin-left: -235px; } }
 
 @media screen and (max-width: 1170px) and (min-width: 769px) {
   main .lg-heading {
