@@ -37,6 +37,64 @@
       width: 150px;
     }
   }
+
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "edutitle"
+      "edu1"
+      "edu2"
+      "skill"
+      "skills"
+      "skills"
+      "exatitle"
+      "exa1"
+      "exa2";
+    grid-template-columns: 1fr;
+  }
+  .bio-image {
+    margin-left: 42%;
+    align-items: center;
+  }
+
+  .bio {
+    width: 100%;
+    margin-left: 8%;
+    margin-top: 1%;
+  }
+
+  .edutitle {
+    text-align: start;
+  }
+
+  .edu1 {
+    margin-left: 22%;
+  }
+  .edu2 {
+    margin-left: 22%;
+  }
+
+  .skill {
+    text-align: start;
+  }
+
+  .skills {
+    margin-left: 20%;
+    padding-left: 13%;
+  }
+
+  .exatitle {
+    text-align: start;
+  }
+
+  .exa1 {
+    margin-left: 22%;
+  }
+
+  .exa2 {
+    margin-left: 22%;
+  }
 }
 
 @include mediaLg {

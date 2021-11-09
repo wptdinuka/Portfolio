@@ -1,6 +1,5 @@
 @import "config";
 @import "menu";
-@import "mobile";
 
 * {
   box-sizing: border-box;
@@ -13,6 +12,8 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
+
+//headings and titles
 
 h1,
 h2 {
@@ -45,34 +46,58 @@ h2 {
     text-align: start;
   }
 
-  &.sm-heading-edu {
-    padding: 5px 20px;
+  &.edutitle {
+    grid-area: edutitle;
     background: rgba($primary-colour, 0.4);
-    margin: 40% 0%;
-    color: $secondary-colour;
-    position: absolute;
+    width: 200%;
+    padding: 5px 20px;
     font-size: 30px;
-    width: 100%;
+    color: $secondary-colour;
+    overflow: hidden;
   }
 
-  &.sm-heading-skil {
-    padding: 5px 20px;
-    background: rgba($primary-colour, 0.4);
-    margin-top: 1100px;
-    color: $secondary-colour;
-    width: 100%;
-    position: absolute;
-    font-size: 30px;
+  &.edutitle1 {
+    grid-area: edutitle1;
+    opacity: 0;
   }
 
-  &.sm-heading-exa {
-    padding: 5px 20px;
+  &.skill {
+    grid-area: skill;
     background: rgba($primary-colour, 0.4);
-    margin-top: 1670px;
-    color: $secondary-colour;
-    width: 100%;
-    position: absolute;
+    width: 200%;
+    padding: 5px 20px;
     font-size: 30px;
+    color: $secondary-colour;
+    overflow: hidden;
+  }
+
+  &.skill1 {
+    grid-area: skill1;
+    opacity: 0;
+  }
+
+  &.exatitle {
+    grid-area: exatitle;
+    background: rgba($primary-colour, 0.4);
+    width: 200%;
+    padding: 5px 20px;
+    font-size: 30px;
+    color: $secondary-colour;
+    overflow: hidden;
+  }
+
+  &.exatitle1 {
+    grid-area: exatitle1;
+    opacity: 0;
+  }
+
+  &.lg-heading-road {
+    font-size: 5.5rem;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 15px;
+    color: $secondary-colour;
+    background: rgba($primary-colour, 0.8);
   }
 }
 
@@ -91,8 +116,10 @@ header {
   color: rgb(2, 2, 54);
 }
 
+//////home
+
 main {
-  height: 100%;
+  min-height: calc(100vh - 150px);
   text-align: center;
 
   &#home {
@@ -103,15 +130,22 @@ main {
   }
 }
 
+//About
+
+//
+
 .about-info {
   display: grid;
   grid-gap: 20px;
-  row-gap: 300px;
-  margin-bottom: 250px;
+  row-gap: 100px;
+  margin-bottom: 200px;
   grid-template-areas:
     "bioimage bio"
+    "edutitle edutitle1"
     "edu1 edu2"
+    "skill skill1"
     "skills skills"
+    "exatitle exatitle1"
     "exa1 exa2";
   grid-template-columns: repeat(2, 1fr);
 }
@@ -313,9 +347,190 @@ main {
   }
 }
 
+//My Road
+//
+
+.jobs {
+  display: flex;
+  column-gap: 170px;
+  width: 80%;
+
+  .jobs-left {
+    flex: 40%;
+    list-style: none;
+    margin-left: 100px;
+    margin-top: 80px;
+    padding-right: 40px;
+    background: rgba(lightgray, 0.8);
+
+    .job1 {
+      font-size: 20px;
+      background: url(/dist/images/gorrilas.jpg);
+      background-size: cover;
+      height: 50vh;
+      width: 65vh;
+      margin-bottom: 150px;
+      margin-top: 120px;
+
+      .jobtext {
+        font-size: 30px;
+        position: absolute;
+        background: rgba(black, 0.9);
+        height: 50vh;
+        width: 65vh;
+        margin-left: -203px;
+        color: white;
+        text-align: center;
+        opacity: 0;
+        &:hover {
+          opacity: 1;
+          @include easeOut;
+        }
+      }
+    }
+
+    .job2 {
+      font-size: 20px;
+      background: url(/dist/images/bakery.jpg);
+      background-size: cover;
+      height: 50vh;
+      width: 65vh;
+      margin-bottom: 150px;
+
+      .jobtext {
+        font-size: 30px;
+        position: absolute;
+        background: rgba(black, 0.9);
+        height: 50vh;
+        width: 65vh;
+        margin-left: -203px;
+        color: white;
+        text-align: center;
+        opacity: 0;
+        &:hover {
+          opacity: 1;
+          @include easeOut;
+        }
+      }
+    }
+
+    .job3 {
+      font-size: 20px;
+      background: url(/dist/images/tkmax.jpg);
+      background-size: cover;
+      height: 50vh;
+      width: 65vh;
+      margin-bottom: 150px;
+
+      .jobtext {
+        font-size: 30px;
+        position: absolute;
+        background: rgba(black, 0.9);
+        height: 50vh;
+        width: 65vh;
+        margin-left: -203px;
+        color: white;
+        text-align: center;
+        opacity: 0;
+        &:hover {
+          opacity: 1;
+          @include easeOut;
+        }
+      }
+    }
+  }
+  .jobs-right {
+    flex: 40%;
+    list-style: none;
+    background: rgba(lightgray, 0.8);
+    margin-top: 280px;
+    padding-top: 120px;
+    padding-right: 40px;
+
+    .job4 {
+      font-size: 20px;
+      background: url(/dist/images/runner.jpg);
+      background-size: cover;
+      height: 50vh;
+      width: 65vh;
+      margin-bottom: 150px;
+
+      .jobtext {
+        font-size: 30px;
+        position: absolute;
+        background: rgba(black, 0.9);
+        height: 50vh;
+        width: 65vh;
+        margin-left: -203px;
+        color: white;
+        text-align: center;
+        opacity: 0;
+        &:hover {
+          opacity: 1;
+          @include easeOut;
+        }
+      }
+    }
+
+    .job5 {
+      font-size: 20px;
+      background: url(/dist/images/edeka.jpg);
+      background-size: cover;
+      height: 50vh;
+      width: 65vh;
+      margin-bottom: 150px;
+
+      .jobtext {
+        font-size: 30px;
+        position: absolute;
+        background: rgba(black, 0.9);
+        height: 50vh;
+        width: 65vh;
+        margin-left: -203px;
+        color: white;
+        text-align: center;
+        opacity: 0;
+        &:hover {
+          opacity: 1;
+          @include easeOut;
+        }
+      }
+    }
+
+    .job6 {
+      font-size: 20px;
+      background: url(/dist/images/macd.jpg);
+      background-size: cover;
+      height: 50vh;
+      width: 65vh;
+      margin-bottom: 100px;
+
+      .jobtext {
+        font-size: 30px;
+        position: absolute;
+        background: rgba(black, 0.9);
+        height: 50vh;
+        width: 65vh;
+        margin-left: -203px;
+        color: white;
+        text-align: center;
+        opacity: 0;
+        &:hover {
+          opacity: 1;
+          @include easeOut;
+        }
+      }
+    }
+  }
+}
+
+//footer
+//
+
 footer {
   background: $primary-colour;
   height: 150px;
+  margin-bottom: 0;
 
   .footer-text {
     font-size: 20px;
@@ -323,3 +538,5 @@ footer {
     padding-top: 50px;
   }
 }
+
+@import "mobile";

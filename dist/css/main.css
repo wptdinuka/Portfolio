@@ -86,36 +86,6 @@
 .nav-item:nth-child(5) {
   transition-delay: 0.5s; }
 
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    font-size: 40px; }
-  main#home h2 {
-    font-size: 15px; } }
-
-@media screen and (max-width: 768px) {
-  main#home h1 {
-    font-size: 50px; }
-  main .lg-heading {
-    line-height: 1; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-  .menu-nav {
-    height: 70vh; }
-  .menu-branding {
-    height: 30vh; }
-    .menu-branding .portrait {
-      height: 150px;
-      width: 150px; } }
-
-@media screen and (max-width: 1170px) and (min-width: 769px) {
-  main .lg-heading {
-    line-height: 1; }
-  main .sm-heading {
-    font-size: 20px; } }
-
 * {
   box-sizing: border-box; }
 
@@ -141,16 +111,31 @@ body {
   body#bg-about {
     background: url(../images/wpt.jpg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    overflow-x: hidden; }
     body#bg-about::after {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 410%;
+      min-height: 100%;
       z-index: -1;
       background: rgba(4, 122, 237, 0.6); }
+  body#bg-road {
+    background: url(/dist/images/roadc.jpg);
+    background-attachment: scroll;
+    background-size: contain;
+    overflow-x: hidden;
+    overflow-y: scroll; }
+    body#bg-road::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 300%;
+      z-index: -1; }
 
 h1,
 h2 {
@@ -179,33 +164,53 @@ h2 {
     padding-left: 30px;
     color: white;
     text-align: start; }
-  h1.sm-heading-edu,
-  h2.sm-heading-edu {
-    padding: 5px 20px;
+  h1.edutitle,
+  h2.edutitle {
+    grid-area: edutitle;
     background: rgba(4, 122, 237, 0.4);
-    margin: 40% 0%;
-    color: white;
-    position: absolute;
+    width: 200%;
+    padding: 5px 20px;
     font-size: 30px;
-    width: 100%; }
-  h1.sm-heading-skil,
-  h2.sm-heading-skil {
-    padding: 5px 20px;
-    background: rgba(4, 122, 237, 0.4);
-    margin-top: 1100px;
     color: white;
-    width: 100%;
-    position: absolute;
-    font-size: 30px; }
-  h1.sm-heading-exa,
-  h2.sm-heading-exa {
-    padding: 5px 20px;
+    overflow: hidden; }
+  h1.edutitle1,
+  h2.edutitle1 {
+    grid-area: edutitle1;
+    opacity: 0; }
+  h1.skill,
+  h2.skill {
+    grid-area: skill;
     background: rgba(4, 122, 237, 0.4);
-    margin-top: 1670px;
+    width: 200%;
+    padding: 5px 20px;
+    font-size: 30px;
     color: white;
+    overflow: hidden; }
+  h1.skill1,
+  h2.skill1 {
+    grid-area: skill1;
+    opacity: 0; }
+  h1.exatitle,
+  h2.exatitle {
+    grid-area: exatitle;
+    background: rgba(4, 122, 237, 0.4);
+    width: 200%;
+    padding: 5px 20px;
+    font-size: 30px;
+    color: white;
+    overflow: hidden; }
+  h1.exatitle1,
+  h2.exatitle1 {
+    grid-area: exatitle1;
+    opacity: 0; }
+  h1.lg-heading-road,
+  h2.lg-heading-road {
+    font-size: 5.5rem;
     width: 100%;
-    position: absolute;
-    font-size: 30px; }
+    margin: auto;
+    padding-bottom: 15px;
+    color: white;
+    background: rgba(4, 122, 237, 0.8); }
 
 a {
   color: white;
@@ -220,7 +225,7 @@ header {
   color: #020236; }
 
 main {
-  height: 100%;
+  min-height: calc(100vh - 150px);
   text-align: center; }
   main#home {
     overflow: hidden; }
@@ -230,9 +235,9 @@ main {
 .about-info {
   display: grid;
   grid-gap: 20px;
-  row-gap: 300px;
-  margin-bottom: 250px;
-  grid-template-areas: "bioimage bio" "edu1 edu2" "skills skills" "exa1 exa2";
+  row-gap: 100px;
+  margin-bottom: 200px;
+  grid-template-areas: "bioimage bio" "edutitle edutitle1" "edu1 edu2" "skill skill1" "skills skills" "exatitle exatitle1" "exa1 exa2";
   grid-template-columns: repeat(2, 1fr); }
 
 .bio-image {
@@ -387,10 +392,208 @@ main {
       opacity: 1;
       transition: all 0.4s ease-in-out; }
 
+.jobs {
+  display: flex;
+  column-gap: 170px;
+  width: 80%; }
+  .jobs .jobs-left {
+    flex: 40%;
+    list-style: none;
+    margin-left: 100px;
+    margin-top: 80px;
+    padding-right: 40px;
+    background: rgba(211, 211, 211, 0.8); }
+    .jobs .jobs-left .job1 {
+      font-size: 20px;
+      background: url(/dist/images/gorrilas.jpg);
+      background-size: cover;
+      height: 50vh;
+      width: 65vh;
+      margin-bottom: 150px;
+      margin-top: 120px; }
+      .jobs .jobs-left .job1 .jobtext {
+        font-size: 30px;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.9);
+        height: 50vh;
+        width: 65vh;
+        margin-left: -203px;
+        color: white;
+        text-align: center;
+        opacity: 0; }
+        .jobs .jobs-left .job1 .jobtext:hover {
+          opacity: 1;
+          transition: all 0.4s ease-in-out; }
+    .jobs .jobs-left .job2 {
+      font-size: 20px;
+      background: url(/dist/images/bakery.jpg);
+      background-size: cover;
+      height: 50vh;
+      width: 65vh;
+      margin-bottom: 150px; }
+      .jobs .jobs-left .job2 .jobtext {
+        font-size: 30px;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.9);
+        height: 50vh;
+        width: 65vh;
+        margin-left: -203px;
+        color: white;
+        text-align: center;
+        opacity: 0; }
+        .jobs .jobs-left .job2 .jobtext:hover {
+          opacity: 1;
+          transition: all 0.4s ease-in-out; }
+    .jobs .jobs-left .job3 {
+      font-size: 20px;
+      background: url(/dist/images/tkmax.jpg);
+      background-size: cover;
+      height: 50vh;
+      width: 65vh;
+      margin-bottom: 150px; }
+      .jobs .jobs-left .job3 .jobtext {
+        font-size: 30px;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.9);
+        height: 50vh;
+        width: 65vh;
+        margin-left: -203px;
+        color: white;
+        text-align: center;
+        opacity: 0; }
+        .jobs .jobs-left .job3 .jobtext:hover {
+          opacity: 1;
+          transition: all 0.4s ease-in-out; }
+  .jobs .jobs-right {
+    flex: 40%;
+    list-style: none;
+    background: rgba(211, 211, 211, 0.8);
+    margin-top: 280px;
+    padding-top: 120px;
+    padding-right: 40px; }
+    .jobs .jobs-right .job4 {
+      font-size: 20px;
+      background: url(/dist/images/runner.jpg);
+      background-size: cover;
+      height: 50vh;
+      width: 65vh;
+      margin-bottom: 150px; }
+      .jobs .jobs-right .job4 .jobtext {
+        font-size: 30px;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.9);
+        height: 50vh;
+        width: 65vh;
+        margin-left: -203px;
+        color: white;
+        text-align: center;
+        opacity: 0; }
+        .jobs .jobs-right .job4 .jobtext:hover {
+          opacity: 1;
+          transition: all 0.4s ease-in-out; }
+    .jobs .jobs-right .job5 {
+      font-size: 20px;
+      background: url(/dist/images/edeka.jpg);
+      background-size: cover;
+      height: 50vh;
+      width: 65vh;
+      margin-bottom: 150px; }
+      .jobs .jobs-right .job5 .jobtext {
+        font-size: 30px;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.9);
+        height: 50vh;
+        width: 65vh;
+        margin-left: -203px;
+        color: white;
+        text-align: center;
+        opacity: 0; }
+        .jobs .jobs-right .job5 .jobtext:hover {
+          opacity: 1;
+          transition: all 0.4s ease-in-out; }
+    .jobs .jobs-right .job6 {
+      font-size: 20px;
+      background: url(/dist/images/macd.jpg);
+      background-size: cover;
+      height: 50vh;
+      width: 65vh;
+      margin-bottom: 100px; }
+      .jobs .jobs-right .job6 .jobtext {
+        font-size: 30px;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.9);
+        height: 50vh;
+        width: 65vh;
+        margin-left: -203px;
+        color: white;
+        text-align: center;
+        opacity: 0; }
+        .jobs .jobs-right .job6 .jobtext:hover {
+          opacity: 1;
+          transition: all 0.4s ease-in-out; }
+
 footer {
   background: #047aed;
-  height: 150px; }
+  height: 150px;
+  margin-bottom: 0; }
   footer .footer-text {
     font-size: 20px;
     text-align: center;
     padding-top: 50px; }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    font-size: 40px; }
+  main#home h2 {
+    font-size: 15px; } }
+
+@media screen and (max-width: 768px) {
+  main#home h1 {
+    font-size: 50px; }
+  main .lg-heading {
+    line-height: 1; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+  .menu-nav {
+    height: 70vh; }
+  .menu-branding {
+    height: 30vh; }
+    .menu-branding .portrait {
+      height: 150px;
+      width: 150px; }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "edutitle" "edu1" "edu2" "skill" "skills" "skills" "exatitle" "exa1" "exa2";
+    grid-template-columns: 1fr; }
+  .bio-image {
+    margin-left: 42%;
+    align-items: center; }
+  .bio {
+    width: 100%;
+    margin-left: 8%;
+    margin-top: 1%; }
+  .edutitle {
+    text-align: start; }
+  .edu1 {
+    margin-left: 22%; }
+  .edu2 {
+    margin-left: 22%; }
+  .skill {
+    text-align: start; }
+  .skills {
+    margin-left: 20%;
+    padding-left: 13%; }
+  .exatitle {
+    text-align: start; }
+  .exa1 {
+    margin-left: 22%; }
+  .exa2 {
+    margin-left: 22%; } }
+
+@media screen and (max-width: 1170px) and (min-width: 769px) {
+  main .lg-heading {
+    line-height: 1; }
+  main .sm-heading {
+    font-size: 20px; } }
