@@ -140,15 +140,6 @@ body {
     background: url(../images/wpt.jpg);
     background-attachment: fixed;
     background-size: cover; }
-    body#bg-contact::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 230%;
-      z-index: -1;
-      background: rgba(211, 211, 211, 0.4); }
 
 h1,
 h2 {
@@ -226,6 +217,14 @@ h2 {
     background: rgba(4, 122, 237, 0.8); }
   h1.lg-heading-contact,
   h2.lg-heading-contact {
+    font-size: 4.5rem;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 15px;
+    color: white;
+    background: rgba(4, 122, 237, 0.8); }
+  h1.lg-heading-work,
+  h2.lg-heading-work {
     font-size: 4.5rem;
     width: 100%;
     margin: auto;
@@ -581,7 +580,8 @@ main {
         color: black;
         background: white;
         margin-left: -50px;
-        padding-top: 75px; }
+        padding-top: 75px;
+        border: 6px solid; }
   .cont .p-num {
     background: url(/dist/images/pn.jpg);
     background-size: cover;
@@ -603,7 +603,8 @@ main {
         color: black;
         background: white;
         margin-left: -50px;
-        padding-top: 75px; }
+        padding-top: 75px;
+        border: 6px solid; }
   .cont .address {
     background: url(/dist/images/address.jpg);
     background-size: cover;
@@ -625,7 +626,47 @@ main {
         color: black;
         background: white;
         margin-left: -50px;
-        padding-top: 75px; }
+        padding-top: 75px;
+        border: 6px solid; }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .projects .item img {
+    width: 60%;
+    margin-top: 40px;
+    border: 2px solid white; }
+    .projects .item img:hover {
+      opacity: 0.5;
+      transition: 0.2s; }
+  .projects .item .btn-light {
+    display: inline-block;
+    color: black;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    background-color: gray;
+    width: 30%;
+    font-size: 25px;
+    font-weight: 500; }
+    .projects .item .btn-light:hover {
+      border: 3px gray solid;
+      background-color: white;
+      transition: 0.2s; }
+  .projects .item .btn-dark {
+    display: inline-block;
+    color: black;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    border: 3px gray solid;
+    width: 30%;
+    font-size: 25px;
+    font-weight: 500; }
+    .projects .item .btn-dark:hover {
+      border: 3px gray solid;
+      background-color: white;
+      transition: 0.2s; }
 
 footer {
   background: #047aed;
@@ -738,7 +779,46 @@ footer {
         .jobs .jobs-right .job6 .jobtext {
           height: 350px;
           width: 470px;
-          margin-left: -235px; } }
+          margin-left: -235px; }
+  .cont .email {
+    height: 25vh;
+    width: 50vh;
+    margin-left: -30px; }
+    .cont .email .cont-text {
+      height: 25vh;
+      width: 50vh; }
+      .cont .email .cont-text:hover {
+        height: 35vh;
+        width: 60vh;
+        color: black;
+        background: white;
+        padding-top: 120px; }
+  .cont .p-num {
+    height: 25vh;
+    width: 50vh;
+    margin-left: -30px; }
+    .cont .p-num .cont-text {
+      height: 25vh;
+      width: 50vh; }
+      .cont .p-num .cont-text:hover {
+        height: 35vh;
+        width: 60vh;
+        color: black;
+        background: white;
+        padding-top: 120px; }
+  .cont .address {
+    height: 25vh;
+    width: 50vh;
+    margin-left: -30px; }
+    .cont .address .cont-text {
+      height: 25vh;
+      width: 50vh; }
+      .cont .address .cont-text:hover {
+        height: 35vh;
+        width: 60vh;
+        color: black;
+        background: white;
+        padding-top: 120px; } }
 
 @media screen and (max-width: 1170px) and (min-width: 769px) {
   main .lg-heading {

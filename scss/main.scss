@@ -108,6 +108,15 @@ h2 {
     color: $secondary-colour;
     background: rgba($primary-colour, 0.8);
   }
+
+  &.lg-heading-work {
+    font-size: 4.5rem;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 15px;
+    color: $secondary-colour;
+    background: rgba($primary-colour, 0.8);
+  }
 }
 
 a {
@@ -568,6 +577,7 @@ main {
         background: white;
         margin-left: -50px;
         padding-top: 75px;
+        border: 6px solid;
       }
     }
   }
@@ -596,6 +606,7 @@ main {
         background: white;
         margin-left: -50px;
         padding-top: 75px;
+        border: 6px solid;
       }
     }
   }
@@ -624,6 +635,59 @@ main {
         background: white;
         margin-left: -50px;
         padding-top: 75px;
+        border: 6px solid;
+      }
+    }
+  }
+}
+
+//work
+//
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .item {
+    img {
+      width: 60%;
+      margin-top: 40px;
+      border: 2px solid white;
+      &:hover {
+        opacity: 0.5;
+        transition: 0.2s;
+      }
+    }
+
+    .btn-light {
+      display: inline-block;
+      color: black;
+      padding: 0.5rem 1rem;
+      border: 0;
+      margin-bottom: 0.3rem;
+      background-color: gray;
+      width: 30%;
+      font-size: 25px;
+      font-weight: 500;
+      &:hover {
+        border: 3px gray solid;
+        background-color: white;
+        transition: 0.2s;
+      }
+    }
+
+    .btn-dark {
+      display: inline-block;
+      color: black;
+      padding: 0.5rem 1rem;
+      border: 0;
+      margin-bottom: 0.3rem;
+      border: 3px gray solid;
+      width: 30%;
+      font-size: 25px;
+      font-weight: 500;
+      &:hover {
+        border: 3px gray solid;
+        background-color: white;
+        transition: 0.2s;
       }
     }
   }
