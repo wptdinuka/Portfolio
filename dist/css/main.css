@@ -283,7 +283,8 @@ main {
   background: rgba(4, 122, 237, 0.4);
   padding: 10px 40px;
   margin-top: 80px;
-  color: white; }
+  color: white;
+  font-size: 18px; }
 
 .edu1 {
   grid-area: edu1;
@@ -384,7 +385,7 @@ main {
   margin-left: 150px; }
   .exa1 .exa-text1 {
     color: white;
-    padding-top: 50px;
+    padding-top: 5px;
     font-size: 25px;
     line-height: 10px;
     background: rgba(0, 0, 0, 0.9);
@@ -393,6 +394,16 @@ main {
     opacity: 0; }
     .exa1 .exa-text1:hover {
       opacity: 1;
+      transition: all 0.4s ease-in-out; }
+  .exa1 th,
+  .exa1 td {
+    padding: 10px;
+    line-height: 30px;
+    border: 1px solid #ddd; }
+    .exa1 th:hover,
+    .exa1 td:hover {
+      color: black;
+      background: white;
       transition: all 0.4s ease-in-out; }
 
 .exa2 {
@@ -415,6 +426,17 @@ main {
     .exa2 .exa-text2:hover {
       opacity: 1;
       transition: all 0.4s ease-in-out; }
+  .exa2 th,
+  .exa2 td {
+    padding: 10px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    width: 465px; }
+    .exa2 th:hover,
+    .exa2 td:hover {
+      color: black;
+      background: white;
+      transition: all 0.4s ease-in-out; }
 
 .jobs {
   display: flex;
@@ -429,7 +451,6 @@ main {
     padding-right: 40px;
     background: rgba(211, 211, 211, 0.8); }
     .jobs .jobs-left .job1 {
-      font-size: 20px;
       background: url(/dist/images/gorrilas.jpg);
       background-size: cover;
       height: 50vh;
@@ -437,7 +458,7 @@ main {
       margin-bottom: 150px;
       margin-top: 120px; }
       .jobs .jobs-left .job1 .jobtext {
-        font-size: 30px;
+        font-size: 20px;
         position: absolute;
         background: rgba(0, 0, 0, 0.9);
         height: 50vh;
@@ -445,7 +466,8 @@ main {
         margin-left: -203px;
         color: white;
         text-align: center;
-        opacity: 0; }
+        opacity: 0;
+        padding-top: 120px; }
         .jobs .jobs-left .job1 .jobtext:hover {
           opacity: 1;
           transition: all 0.4s ease-in-out; }
@@ -457,7 +479,7 @@ main {
       width: 65vh;
       margin-bottom: 150px; }
       .jobs .jobs-left .job2 .jobtext {
-        font-size: 30px;
+        font-size: 20px;
         position: absolute;
         background: rgba(0, 0, 0, 0.9);
         height: 50vh;
@@ -465,7 +487,8 @@ main {
         margin-left: -203px;
         color: white;
         text-align: center;
-        opacity: 0; }
+        opacity: 0;
+        padding-top: 120px; }
         .jobs .jobs-left .job2 .jobtext:hover {
           opacity: 1;
           transition: all 0.4s ease-in-out; }
@@ -477,7 +500,7 @@ main {
       width: 65vh;
       margin-bottom: 150px; }
       .jobs .jobs-left .job3 .jobtext {
-        font-size: 30px;
+        padding-top: 120px;
         position: absolute;
         background: rgba(0, 0, 0, 0.9);
         height: 50vh;
@@ -504,7 +527,7 @@ main {
       width: 65vh;
       margin-bottom: 150px; }
       .jobs .jobs-right .job4 .jobtext {
-        font-size: 30px;
+        padding-top: 120px;
         position: absolute;
         background: rgba(0, 0, 0, 0.9);
         height: 50vh;
@@ -524,7 +547,7 @@ main {
       width: 65vh;
       margin-bottom: 150px; }
       .jobs .jobs-right .job5 .jobtext {
-        font-size: 30px;
+        padding-top: 120px;
         position: absolute;
         background: rgba(0, 0, 0, 0.9);
         height: 50vh;
@@ -544,7 +567,7 @@ main {
       width: 65vh;
       margin-bottom: 100px; }
       .jobs .jobs-right .job6 .jobtext {
-        font-size: 30px;
+        padding-top: 120px;
         position: absolute;
         background: rgba(0, 0, 0, 0.9);
         height: 50vh;
@@ -637,7 +660,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
   .projects .item img {
-    width: 390px;
+    width: 416px;
     margin-top: 40px;
     border: 2px solid white; }
     .projects .item img:hover {

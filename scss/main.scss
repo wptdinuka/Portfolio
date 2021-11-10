@@ -195,6 +195,7 @@ main {
   padding: 10px 40px;
   margin-top: 80px;
   color: $secondary-colour;
+  font-size: 18px;
 }
 
 .edu1 {
@@ -328,7 +329,7 @@ main {
 
   .exa-text1 {
     color: white;
-    padding-top: 50px;
+    padding-top: 5px;
     font-size: 25px;
     line-height: 10px;
     background: rgba(black, 0.9);
@@ -338,6 +339,17 @@ main {
 
     &:hover {
       opacity: 1;
+      @include easeOut;
+    }
+  }
+  th,
+  td {
+    padding: 10px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    &:hover {
+      color: black;
+      background: white;
       @include easeOut;
     }
   }
@@ -367,6 +379,18 @@ main {
       @include easeOut;
     }
   }
+  th,
+  td {
+    padding: 10px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    width: 465px;
+    &:hover {
+      color: black;
+      background: white;
+      @include easeOut;
+    }
+  }
 }
 
 //My Road
@@ -387,7 +411,6 @@ main {
     background: rgba(lightgray, 0.8);
 
     .job1 {
-      font-size: 20px;
       background: url(/dist/images/gorrilas.jpg);
       background-size: cover;
       height: 50vh;
@@ -396,7 +419,7 @@ main {
       margin-top: 120px;
 
       .jobtext {
-        font-size: 30px;
+        font-size: 20px;
         position: absolute;
         background: rgba(black, 0.9);
         height: 50vh;
@@ -405,6 +428,7 @@ main {
         color: white;
         text-align: center;
         opacity: 0;
+        padding-top: 120px;
         &:hover {
           opacity: 1;
           @include easeOut;
@@ -421,7 +445,7 @@ main {
       margin-bottom: 150px;
 
       .jobtext {
-        font-size: 30px;
+        font-size: 20px;
         position: absolute;
         background: rgba(black, 0.9);
         height: 50vh;
@@ -430,6 +454,7 @@ main {
         color: white;
         text-align: center;
         opacity: 0;
+        padding-top: 120px;
         &:hover {
           opacity: 1;
           @include easeOut;
@@ -446,7 +471,7 @@ main {
       margin-bottom: 150px;
 
       .jobtext {
-        font-size: 30px;
+        padding-top: 120px;
         position: absolute;
         background: rgba(black, 0.9);
         height: 50vh;
@@ -479,7 +504,7 @@ main {
       margin-bottom: 150px;
 
       .jobtext {
-        font-size: 30px;
+        padding-top: 120px;
         position: absolute;
         background: rgba(black, 0.9);
         height: 50vh;
@@ -504,7 +529,7 @@ main {
       margin-bottom: 150px;
 
       .jobtext {
-        font-size: 30px;
+        padding-top: 120px;
         position: absolute;
         background: rgba(black, 0.9);
         height: 50vh;
@@ -529,7 +554,7 @@ main {
       margin-bottom: 100px;
 
       .jobtext {
-        font-size: 30px;
+        padding-top: 120px;
         position: absolute;
         background: rgba(black, 0.9);
         height: 50vh;
@@ -652,7 +677,7 @@ main {
   grid-template-columns: repeat(2, 1fr);
   .item {
     img {
-      width: 390px;
+      width: 416px;
       margin-top: 40px;
       border: 2px solid white;
       &:hover {
