@@ -205,7 +205,7 @@ main {
   height: 200px;
   margin: auto;
   margin-left: 160px;
-  background: url(images/thw.jpg);
+  background: url(../images/thw.jpg);
   background-size: cover;
 
   .edu-text1 {
@@ -228,7 +228,7 @@ main {
 
 .edu2 {
   grid-area: edu2;
-  background: url(images/rc.jpg);
+  background: url(../images/rc.jpg);
   background-size: cover;
   width: 465px;
   height: 200px;
@@ -320,7 +320,7 @@ main {
 
 .exa1 {
   grid-area: exa1;
-  background: url(images/teatas.jpg);
+  background: url(../images/teatas.jpg);
   background-size: cover;
   width: 465px;
   height: 300px;
@@ -357,7 +357,7 @@ main {
 
 .exa2 {
   grid-area: exa2;
-  background: url(images/telc.jpg);
+  background: url(../images/telc.jpg);
   background-size: cover;
   width: 465px;
   height: 300px;
@@ -411,7 +411,7 @@ main {
     background: rgba(lightgray, 0.8);
 
     .job1 {
-      background: url(images/gorrilas.jpg);
+      background: url(../images/gorrilas.jpg);
       background-size: cover;
       height: 50vh;
       width: 65vh;
@@ -438,7 +438,7 @@ main {
 
     .job2 {
       font-size: 20px;
-      background: url(images/bakery.jpg);
+      background: url(../images/bakery.jpg);
       background-size: cover;
       height: 50vh;
       width: 65vh;
@@ -464,7 +464,7 @@ main {
 
     .job3 {
       font-size: 20px;
-      background: url(images/tkmax.jpg);
+      background: url(../images/tkmax.jpg);
       background-size: cover;
       height: 50vh;
       width: 65vh;
@@ -497,7 +497,7 @@ main {
 
     .job4 {
       font-size: 20px;
-      background: url(images/runner.jpg);
+      background: url(../images/runner.jpg);
       background-size: cover;
       height: 50vh;
       width: 65vh;
@@ -522,7 +522,7 @@ main {
 
     .job5 {
       font-size: 20px;
-      background: url(images/edeka.jpg);
+      background: url(../images/edeka.jpg);
       background-size: cover;
       height: 50vh;
       width: 65vh;
@@ -547,7 +547,7 @@ main {
 
     .job6 {
       font-size: 20px;
-      background: url(images/macd.jpg);
+      background: url(../images/macd.jpg);
       background-size: cover;
       height: 50vh;
       width: 65vh;
@@ -582,7 +582,7 @@ main {
   align-items: center;
 
   .email {
-    background: url(images/email.jpg);
+    background: url(../images/email.jpg);
     background-size: cover;
     height: 35vh;
     width: 70vh;
@@ -612,7 +612,7 @@ main {
   }
 
   .p-num {
-    background: url(images/pn.jpg);
+    background: url(../images/pn.jpg);
     background-size: cover;
     height: 35vh;
     width: 70vh;
@@ -641,7 +641,7 @@ main {
   }
 
   .address {
-    background: url(images/address.jpg);
+    background: url(../images/address.jpg);
     background-size: cover;
     height: 35vh;
     width: 70vh;

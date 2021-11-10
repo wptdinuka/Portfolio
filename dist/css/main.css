@@ -123,7 +123,7 @@ body {
       z-index: -1;
       background: rgba(4, 122, 237, 0.6); }
   body#bg-road {
-    background: url(images/roadc.jpg);
+    background: url(../images/roadc.jpg);
     background-attachment: scroll;
     background-size: contain;
     overflow-x: hidden;
@@ -293,7 +293,7 @@ main {
   height: 200px;
   margin: auto;
   margin-left: 160px;
-  background: url(images/thw.jpg);
+  background: url(../images/thw.jpg);
   background-size: cover; }
   .edu1 .edu-text1 {
     position: absolute;
@@ -311,7 +311,7 @@ main {
 
 .edu2 {
   grid-area: edu2;
-  background: url(images/rc.jpg);
+  background: url(../images/rc.jpg);
   background-size: cover;
   width: 465px;
   height: 200px;
@@ -377,7 +377,7 @@ main {
 
 .exa1 {
   grid-area: exa1;
-  background: url(images/teatas.jpg);
+  background: url(../images/teatas.jpg);
   background-size: cover;
   width: 465px;
   height: 300px;
@@ -408,7 +408,7 @@ main {
 
 .exa2 {
   grid-area: exa2;
-  background: url(images/telc.jpg);
+  background: url(../images/telc.jpg);
   background-size: cover;
   width: 465px;
   height: 300px;
@@ -451,7 +451,7 @@ main {
     padding-right: 40px;
     background: rgba(211, 211, 211, 0.8); }
     .jobs .jobs-left .job1 {
-      background: url(images/gorrilas.jpg);
+      background: url(../images/gorrilas.jpg);
       background-size: cover;
       height: 50vh;
       width: 65vh;
@@ -473,7 +473,7 @@ main {
           transition: all 0.4s ease-in-out; }
     .jobs .jobs-left .job2 {
       font-size: 20px;
-      background: url(images/bakery.jpg);
+      background: url(../images/bakery.jpg);
       background-size: cover;
       height: 50vh;
       width: 65vh;
@@ -494,7 +494,7 @@ main {
           transition: all 0.4s ease-in-out; }
     .jobs .jobs-left .job3 {
       font-size: 20px;
-      background: url(images/tkmax.jpg);
+      background: url(../images/tkmax.jpg);
       background-size: cover;
       height: 50vh;
       width: 65vh;
@@ -521,7 +521,7 @@ main {
     padding-right: 40px; }
     .jobs .jobs-right .job4 {
       font-size: 20px;
-      background: url(images/runner.jpg);
+      background: url(../images/runner.jpg);
       background-size: cover;
       height: 50vh;
       width: 65vh;
@@ -541,7 +541,7 @@ main {
           transition: all 0.4s ease-in-out; }
     .jobs .jobs-right .job5 {
       font-size: 20px;
-      background: url(images/edeka.jpg);
+      background: url(../images/edeka.jpg);
       background-size: cover;
       height: 50vh;
       width: 65vh;
@@ -561,7 +561,7 @@ main {
           transition: all 0.4s ease-in-out; }
     .jobs .jobs-right .job6 {
       font-size: 20px;
-      background: url(images/macd.jpg);
+      background: url(../images/macd.jpg);
       background-size: cover;
       height: 50vh;
       width: 65vh;
@@ -586,7 +586,7 @@ main {
   flex-direction: column;
   align-items: center; }
   .cont .email {
-    background: url(images/email.jpg);
+    background: url(../images/email.jpg);
     background-size: cover;
     height: 35vh;
     width: 70vh;
@@ -610,7 +610,7 @@ main {
         padding-top: 75px;
         border: 6px solid; }
   .cont .p-num {
-    background: url(images/pn.jpg);
+    background: url(../images/pn.jpg);
     background-size: cover;
     height: 35vh;
     width: 70vh;
@@ -633,7 +633,7 @@ main {
         padding-top: 75px;
         border: 6px solid; }
   .cont .address {
-    background: url(images/address.jpg);
+    background: url(../images/address.jpg);
     background-size: cover;
     height: 35vh;
     width: 70vh;
