@@ -2,6 +2,7 @@ $primary-colour: #047aed;
 $secondary-colour: white;
 $show-home-image: true;
 $home-image: url(../images/wpt.jpg);
+$road-image: url(../images/roadc.jpg);
 $background-opacity: 0.6;
 
 @mixin easeOut {
@@ -45,7 +46,7 @@ $background-opacity: 0.6;
     }
 
     &#bg-road {
-      background-image: url(../images/roadc.jpg);
+      background: $road-image;
       background-attachment: scroll;
       background-size: contain;
       overflow-x: hidden;
